@@ -31,7 +31,6 @@
 		[parse_to_dict/1
 		,fragment_buffer_data/2
 		,check_msg_credentials/2
-		,get_tag_text/1
 		,get_msg_type/1]).
 
 %% API

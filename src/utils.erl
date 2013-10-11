@@ -26,7 +26,7 @@
 		,fragment_buffer_data/2
 		,get_msg_type/1
 		,check_msg_credentials/2
-		,get_tag_text/1]).
+		]).
 
 %%-------------------------------------------------------------------
 parse_to_dict(Data) ->
@@ -227,80 +227,6 @@ get_msg_type("x") -> "SecurityListRequest";
 get_msg_type("y") -> "SecurityList";
 get_msg_type("z") -> "DerivativeSecurityListRequest";
 get_msg_type(_) ->	"***Invalid Message Type***".
-
-%%--------------------------------------------------------
-get_tag_text("7") -> "BeginSeqNo";
-get_tag_text("8") -> "BeginString";
-get_tag_text("9") -> "BodyLength";
-get_tag_text("10") -> "CheckSum";
-get_tag_text("16") -> "EndSeqNo";
-get_tag_text("34") -> "MsgSeqNum";
-get_tag_text("35") -> "MsgType";
-get_tag_text("36") -> "NewSeqNo";
-get_tag_text("43") -> "PossDupFlag";
-get_tag_text("45") -> "RefSeqNum";
-get_tag_text("49") -> "SenderCompID";
-get_tag_text("50") -> "SenderSubID";
-get_tag_text("52") -> "SendingTime";
-get_tag_text("56") -> "TargetCompID";
-get_tag_text("57") -> "TargetSubID";
-get_tag_text("58") -> "Text";
-get_tag_text("89") -> "Signature";
-get_tag_text("90") -> "SecureDataLen";
-get_tag_text("91") -> "SecureData";
-get_tag_text("93") -> "SignatureLength";
-get_tag_text("95") -> "RawDataLength";
-get_tag_text("96") -> "RawData";
-get_tag_text("97") -> "PossResend";
-get_tag_text("98") -> "EncryptMethod";
-get_tag_text("108") -> "HeartBtInt";
-get_tag_text("112") -> "TestReqID";
-get_tag_text("115") -> "OnBehalfOfCompID";
-get_tag_text("116") -> "OnBehalfOfSubID";
-get_tag_text("122") -> "OrigSendingTime";
-get_tag_text("123") -> "GapFillFlag";
-get_tag_text("128") -> "DeliverToCompID";
-get_tag_text("129") -> "DeliverToSubID";
-get_tag_text("141") -> "ResetSeqNumFlag";
-get_tag_text("142") -> "SenderLocationID";
-get_tag_text("143") -> "TargetLocationID";
-get_tag_text("144") -> "OnBehalfOfLocationID";
-get_tag_text("145") -> "DeliverToLocationID";
-get_tag_text("212") -> "XmlDataLen";
-get_tag_text("213") -> "XmlData";
-get_tag_text("347") -> "MessageEncoding";
-get_tag_text("354") -> "EncodedTextLen";
-get_tag_text("355") -> "EncodedText";
-get_tag_text("369") -> "LastMsgSeqNumProcessed";
-get_tag_text("371") -> "RefTagID";
-get_tag_text("372") -> "RefMsgType";
-get_tag_text("373") -> "SessionRejectReason";
-get_tag_text("383") -> "MaxMessageSize";
-get_tag_text("464") -> "TestMessageIndicator";
-get_tag_text("553") -> "Username";
-get_tag_text("554") -> "Password";
-get_tag_text("627") -> "NoHops";
-get_tag_text("628") -> "HopCompID";
-get_tag_text("629") -> "HopSendingTime";
-get_tag_text("630") -> "HopRefID";
-get_tag_text("789") -> "NextExpectedMsgSeqNum";
-get_tag_text("925") -> "NewPassword";
-get_tag_text("1128") -> "ApplVerID";
-get_tag_text("1129") -> "CstmApplVerID";
-get_tag_text("1130") -> "RefApplVerID";
-get_tag_text("1131") -> "RefCstmApplVerID";
-get_tag_text("1137") -> "DefaultApplVerID";
-get_tag_text("1156") -> "ApplExtID";
-get_tag_text("1400") -> "EncryptedPasswordMethod";
-get_tag_text("1401") -> "EncryptedPasswordLen";
-get_tag_text("1402") -> "EncryptedPassword";
-get_tag_text("1403") -> "EncryptedNewPasswordLen";
-get_tag_text("1404") -> "EncryptedNewPassword";
-get_tag_text("1406") -> "RefApplExtID";
-get_tag_text("1407") -> "DefaultApplExtID";
-get_tag_text("1408") -> "DefaultCstmApplVerID";
-get_tag_text("1409") -> "SessionStatus";
-get_tag_text(_) ->	"**Invalid Tag***".
 
 %%--------------------------------------------------------
 check_msg_credentials(ServerData, Msg) ->
